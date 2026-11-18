@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "shot_order": [
+    "SHOT_A",
+    "SHOT_B"
+  ],
+  "shots": [
+    {
+      "shot_id": "SHOT_A",
+      "blend": {
+        "file": "A.blend",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "packaging": "self_contained_blend"
+      },
+      "scene": "Scene",
+      "view_layer": "ViewLayer",
+      "camera": "Camera",
+      "frame_start": 1,
+      "frame_end": 24,
+      "fps": 24,
+      "resolution": {
+        "width": 1920,
+        "height": 1080,
+        "percentage": 100
+      },
+      "settings": {
+        "engine": "CYCLES",
+        "color_management": {
+          "display_device": "sRGB"
+        }
+      }
+    },
+    {
+      "shot_id": "SHOT_B",
+      "blend": {
+        "file": "B.blend",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "packaging": "self_contained_blend"
+      },
+      "scene": "Scene",
+      "view_layer": "ViewLayer",
+      "camera": "Camera",
+      "frame_start": 1,
+      "frame_end": 24,
+      "fps": 24,
+      "resolution": {
+        "width": 1920,
+        "height": 1080,
+        "percentage": 100
+      },
+      "settings": {
+        "engine": "CYCLES",
+        "color_management": {
+          "display_device": "sRGB"
+        }
+      }
+    }
+  ]
+}

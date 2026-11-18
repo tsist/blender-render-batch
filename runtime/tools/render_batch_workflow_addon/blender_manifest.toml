@@ -1,0 +1,12 @@
+schema_version = "1.0.0"
+id = "render_batch_workflow_addon"
+version = "0.3.0"
+name = "Render Batch Workflow"
+tagline = "Render batch shots, previews, progress and explicit CLI recovery"
+maintainer = "Blender AI"
+type = "add-on"
+blender_version_min = "5.2.1"
+license = ["SPDX:GPL-3.0-or-later"]
+
+[permissions]
+files = "Read batch files, open reviews, and write the CLI log"
