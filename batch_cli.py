@@ -21,7 +21,7 @@ class Parser(argparse.ArgumentParser):
 
 def main(argv=None):
     parser = Parser(description=__doc__)
-    parser.add_argument("--version", action="version", version="0.3.0")
+    parser.add_argument("--version", action="version", version="0.3.1")
     blender = os.environ.get("BLENDER_EXECUTABLE") or shutil.which("blender") or "blender.exe"
     parser.add_argument("--blender", type=Path, default=Path(blender))
     parser.add_argument("--jobs-dir", type=Path, default=BASE / "jobs")

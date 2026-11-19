@@ -1,6 +1,6 @@
 # Windows local batch
 
-Get the matching CLI source bundle and add-on ZIP from [the public release](https://github.com/tsist/blender-render-batch/releases). Run the launcher in the release root using PowerShell 7 and Python 3.13. Point `--blender` at Blender 5.2.1 and provide FFmpeg and FFprobe. FFmpeg needs PNG, `drawtext`, `zscale`, and `libx264`.
+Get the matching CLI source bundle and add-on ZIP from [the public release](https://github.com/tsist/blender-render-batch/releases). Run the launcher in the release root using PowerShell 7. Point `--blender` at Blender 5.3.0 or 5.2.1 and provide FFmpeg and FFprobe. The launcher can use Blender's bundled Python. FFmpeg needs PNG, `drawtext`, `zscale`, and `libx264`.
 
 ```powershell
 .\blenderctl.ps1 --blender $Blender --jobs-dir $Jobs render devices

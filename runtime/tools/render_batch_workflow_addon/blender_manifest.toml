@@ -1,6 +1,6 @@
 schema_version = "1.0.0"
 id = "render_batch_workflow_addon"
-version = "0.3.0"
+version = "0.3.1"
 name = "Render Batch Workflow"
 tagline = "Render batch shots, previews, progress and explicit CLI recovery"
 maintainer = "Blender AI"

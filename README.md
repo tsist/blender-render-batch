@@ -4,8 +4,8 @@ Render an ordered list of Blender animation shots in the background. Get preview
 
 ## Install and run on Windows
 
-1. Install the **Render Batch Workflow** ZIP from [GitHub Releases](https://github.com/tsist/blender-render-batch/releases) using Blender's **Preferences → Get Extensions → Install from Disk**. Use Blender 5.2.1 LTS.
-2. Keep the release source or CLI bundle on disk. Use PowerShell 7, Python 3.13 (or the interpreter bundled with Blender 5.2), and FFmpeg plus FFprobe with `zscale`, `libx264`, and `drawtext`. The bundle contains source, not Blender or FFmpeg binaries.
+1. Install the **Render Batch Workflow** ZIP from [GitHub Releases](https://github.com/tsist/blender-render-batch/releases) using Blender's **Preferences → Get Extensions → Install from Disk**. Use Blender 5.3.0 or 5.2.1 LTS on Windows.
+2. Keep the release source or CLI bundle on disk. Use PowerShell 7, the selected Blender installation's bundled Python or Python 3.13, and FFmpeg plus FFprobe with `zscale`, `libx264`, and `drawtext`. Install Blender and FFmpeg separately.
 3. Generate an entirely procedural demo. The argument after `--` is a new directory.
 
 ```powershell
@@ -25,7 +25,7 @@ See the [agent skill](skills/blender-render-batch/SKILL.md), [local manifest and
 
 ## Scope
 
-Windows local batches use Blender 5.2.1 Cycles or EEVEE. The first output profile is 1920×1080, 24 fps, SDR: lossless PNG and H.264 BT.709 review. Cloud execution uses the separate Linux Cycles workflow. GPU admission uses driver telemetry when available. Read the references for input constraints and check the release notes for the exact verified environment.
+The 1920×1080, 24 fps SDR profile produces lossless PNG frames and a BT.709 H.264 review. On Windows, the Blender 5.3.0 migration was tested with a CPU Cycles batch. The Blender 5.2.1 baseline covers Cycles and EEVEE. The separate Linux Cycles workflow keeps its verified Blender 5.2.1 pin. GPU admission uses driver telemetry when available.
 
 ## License
 

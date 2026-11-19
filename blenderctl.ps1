@@ -15,10 +15,13 @@ if (!$python) {
         $blender = (Get-Command blender.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1).Source
     }
     if ($blender -and (Test-Path -LiteralPath $blender -PathType Leaf)) {
-        $blenderDirectory = Split-Path (Resolve-Path -LiteralPath $blender).Path
-        $bundledPython = Join-Path $blenderDirectory '5.2\python\bin\python.exe'
-        if (Test-Path -LiteralPath $bundledPython -PathType Leaf) {
-            $python = $bundledPython
+        $executable = Get-Item -LiteralPath $blender
+        $productVersion = $executable.VersionInfo.ProductVersionRaw
+        if ($productVersion -and $productVersion.Major -ge 5) {
+            $bundledPython = Join-Path $executable.DirectoryName ($productVersion.ToString(2) + '\python\bin\python.exe')
+            if (Test-Path -LiteralPath $bundledPython -PathType Leaf) {
+                $python = $bundledPython
+            }
         }
     }
 }
@@ -26,7 +29,7 @@ if (!$python) {
     $python = (Get-Command python.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1).Source
 }
 if (!$python) {
-    throw 'Set BLENDERCTL_PYTHON to the Python executable included in Blender 5.2.'
+    throw 'Set BLENDERCTL_PYTHON to Python 3.13 or use a Blender executable with bundled Python.'
 }
 & $python -B $entry @args
 exit $LASTEXITCODE
